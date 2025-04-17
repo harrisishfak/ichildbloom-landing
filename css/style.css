@@ -312,7 +312,7 @@ a:focus {
 }
 
 .slider_section .carousel-indicators li {
-  background-color: #6bb7be;
+  background-color: #50CC7F;
   width: 12px;
   height: 12px;
   border-radius: 100%;
@@ -322,7 +322,7 @@ a:focus {
 .slider_section .carousel-indicators li.active {
   width: 17px;
   height: 17px;
-  background-color: #f89646;
+  background-color: #225882;
 }
 
 .furniture_section .box {

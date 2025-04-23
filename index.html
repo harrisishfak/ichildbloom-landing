@@ -22,7 +22,7 @@
     gtag('config', 'G-CEYSCMV30B');
   </script>
 
-  <title>iChildBloom - Home</title>
+  <title>iChildBloom - Autism & Child's Development Support Software</title>
 
 
   <!-- bootstrap core css -->
@@ -57,7 +57,7 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent" >
           <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
-            <ul class="navbar-nav  ">
+            <ul class="navbar-nav w-100">
 
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="whoWeServe" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="text-transform: none;">
@@ -470,7 +470,7 @@
 
 
   <!-- about section -->
-
+<!-- 
   <section class="about_section layout_padding long_section">
     <div class="container">
       <div class="row">
@@ -494,7 +494,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- end about section -->
 
@@ -625,13 +625,13 @@
         <a href="">
           <i class="fa fa-phone" aria-hidden="true"></i>
           <span>
-            Call : +92 316 4910570
+          +92 316 4910570
           </span>
         </a>
         <a href="">
           <i class="fa fa-envelope" aria-hidden="true"></i>
           <span>
-            Email : harrisishfak@gmail.com
+            harrisishfak@gmail.com
           </span>
         </a>
         <a href="https://www.google.com/search?q=lahore+pakistan&sca_esv=a24eb7beebb63ee4&rlz=1C5CHFA_enPK1019PK1019&ei=2a4HaLPGH4mxi-gPk9izmAw&ved=0ahUKEwjzlvrd8-uMAxWJ2AIHHRPsDMMQ4dUDCBM&uact=5&oq=lahore+pakistan&gs_lp=Egxnd3Mtd2l6LXNlcnAiD2xhaG9yZSBwYWtpc3RhbjILEAAYgAQYkQIYigUyDhAuGIAEGJECGLEDGIoFMgsQABiABBiRAhiKBTIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgARIr0JQzQpY6D5wDXgBkAEAmAHEAqABgzOqAQYyLTI0LjG4AQPIAQD4AQGYAiagAtA0wgIKEAAYsAMY1gQYR8ICDRAAGIAEGLADGEMYigXCAgoQABiABBhDGIoFwgIKEC4YgAQYQxiKBcICDRAAGIAEGLEDGEMYigXCAg0QLhiABBixAxhDGIoFwgIIEAAYgAQYsQPCAg4QABiABBiRAhixAxiKBcICCxAuGIAEGLEDGIMBwgILEC4YgAQYxwEYrwHCAgsQLhiABBiRAhiKBcICBRAuGIAEwgIHEAAYgAQYCsICBhAAGBYYHsICERAAGIAEGJECGLEDGIMBGIoFwgIOEAAYgAQYsQMYgwEYigWYAwCIBgGQBgqSBwkxMy4wLjIzLjKgB7PIAbIHBjItMjMuMrgHlTQ&sclient=gws-wiz-serp" target="_blank">
@@ -645,6 +645,13 @@
           <i class="fa fa-envelope-o" aria-hidden="true"></i>
           <span>
             Founder's Message
+          </span>
+        </a>
+
+        <a href="about.html">
+          <i class="fa fa-address-card" aria-hidden="true"></i>
+          <span>
+            About us
           </span>
         </a>
       </div>
@@ -738,93 +745,110 @@
 </html>
 
 <style>
-  /* Parent Nav Item */
-  .nav-item {
-    position: relative;
+ /* Navigation Dropdown Styles */
+.nav-item {
+  position: relative;
+  margin-bottom: 2px !important;
+}
+
+.nav-link.dropdown-toggle {
+  text-transform: none;
+}
+
+/* Dropdown Container */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none; /* Changed from block to none for better control */
+  opacity: 0;
+  visibility: hidden;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: all 0.3s ease;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  min-width: 200px;
+  z-index: 999;
+  padding: 10px 0;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
+}
+
+/* Show dropdown on hover */
+.nav-item.dropdown:hover .dropdown-menu,
+.nav-item.dropdown:focus-within .dropdown-menu { /* Added for better accessibility */
+  display: grid;
+  opacity: 1;
+  visibility: visible;
+  transform: scaleY(1);
+}
+
+/* Dropdown Structure */
+.dropdown-category {
+  padding-bottom: 10px;
+}
+
+.dropdown-header {
+  font-weight: bold;
+  color: #225882;
+  margin-bottom: 8px;
+  padding: 0 20px;
+}
+
+/* Dropdown Items */
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  padding: 10px 20px;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+  text-transform: none;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: #f1f1f1;
+  color: #225882;
+  outline: none;
+}
+
+/* Icons */
+.dropdown-item img {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  filter: brightness(0) saturate(100%) sepia(85%) hue-rotate(170deg) saturate(500%) brightness(85%);
+  transition: filter 0.2s;
+}
+
+.dropdown-item:hover img {
+  filter: brightness(0) saturate(100%) sepia(100%) hue-rotate(170deg) saturate(700%) brightness(75%);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 991.98px) {
+  .navbar-nav .nav-item {
+    margin-bottom: 4px !important;
   }
   
-  /* Who We Serve Link */
-  .nav-link.dropdown-toggle {
-    text-transform: none;
-  }
-  
-  /* Dropdown container */
   .dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    display: block;
-    opacity: 0;
-    visibility: hidden;
-    transform: scaleY(0);
-    transform-origin: top;
-    transition: all 0.3s ease;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    min-width: 200px;
-    z-index: 999;
-    padding: 10px 0;
-  }
-  
-  /* Show dropdown on hover */
-  .nav-item.dropdown:hover .dropdown-menu {
+    position: static;
+    transform: none;
+    box-shadow: none;
+    display: none;
     opacity: 1;
     visibility: visible;
-    transform: scaleY(1);
+    transition: none;
   }
   
-  /* Dropdown items */
-  .dropdown-item {
-    display: flex;
-    align-items: center;
-    font-size: 14px;
-    padding: 10px 20px;
-    color: #333;
-    text-decoration: none;
-    transition: background-color 0.2s;
-    text-transform: none;
+  .nav-item.dropdown:hover .dropdown-menu,
+  .nav-item.dropdown:focus-within .dropdown-menu {
+    display: block;
+    transform: none;
   }
-  
-  /* Item hover */
-  .dropdown-item:hover {
-    background-color: #f1f1f1;
-    color: #225882;
-  }
-  
-  /* Icons (image based) */
-  .dropdown-item img {
-    width: 18px;
-    height: 18px;
-    margin-right: 10px;
-    filter: brightness(0) saturate(100%) sepia(85%) hue-rotate(170deg) saturate(500%) brightness(85%);
-  }
-
-  .dropdown-category {
-    padding-bottom: 10px;
-  }
-
-  .dropdown-header {
-    font-weight: bold;
-    color: #225882;
-    margin-bottom: 8px;
-  }
-
-  .dropdown-item {
-    display: flex;
-    align-items: center;
-    padding: 10px 20px;
-    font-size: 14px;
-    text-decoration: none;
-  }
-
-  .dropdown-item img {
-    margin-right: 10px;
-  }
-
-  .dropdown-menu {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 10px;
-  }
+}
   </style>

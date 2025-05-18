@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pricing Plans</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <style>
+    :root {
+      --main-color: #225882;
+    }
+
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .toggle-btns {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .toggle-btns .btn {
+      margin: 0 10px;
+      border-color: var(--main-color);
+      color: var(--main-color);
+    }
+
+    .toggle-btns .btn.active,
+    .toggle-btns .btn:hover {
+      background-color: var(--main-color);
+      color: #fff;
+    }
+
+    .card {
+      transition: all 0.3s ease;
+      border: none;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    }
+
+    .card.highlight {
+      border: 2px solid var(--main-color);
+    }
+
+    .card-title {
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+
+    .card-price {
+      font-size: 1.8rem;
+      color: var(--main-color);
+      font-weight: 600;
+      margin: 1rem 0;
+    }
+
+    .card-subtitle {
+      font-size: 0.9rem;
+      color: #6c757d;
+    }
+
+    .tag-line {
+      font-size: 0.85rem;
+      font-style: italic;
+      color: #888;
+    }
+
+    .badge {
+      margin-top: 10px;
+      background-color: var(--main-color);
+    }
+
+    .section-hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container py-5">
+    <h2 class="text-center mb-5">Choose Your Plan</h2>
+
+    <div class="toggle-btns mb-4">
+      <button class="btn active" id="btn-provider">Therapist</button>
+      <button class="btn" id="btn-parent">Parent</button>
+      <button class="btn" id="btn-organization">Organization</button>
+    </div>
+
+    <!-- Provider Packages -->
+    <div class="row section" id="provider-packages">
+     <div class="col-md-4 mb-4">
+  <div class="card h-100 text-center p-4">
+    <div class="card-body">
+      <h5 class="card-title">Starter</h5>
+      <p class="card-subtitle">Ideal for therapists beginning their private practice</p>
+      <p class="card-price">Rs. 3,500 / month</p>
+      <p>Manage up to 3 individual profiles</p>
+      <p>Full access to profile management tools</p>
+      <p>Apply to up to 10 job opportunities</p>
+    </div>
+  </div>
+</div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 text-center p-4 highlight">
+          <div class="card-body">
+            <h5 class="card-title">Basic</h5>
+            <p class="card-subtitle">For full-time therapists with steady client flow</p>
+            <p class="card-price">Rs. 5,000 / month</p>
+            <p>Manage up to 5 individual profiles</p>
+            <p>Full access to profile management tools</p>
+            <p>Apply to up to 25 job opportunities</p>
+            <span class="badge text-white">Best Pick</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 text-center p-4">
+          <div class="card-body">
+            <h5 class="card-title">Premium</h5>
+            <p class="card-subtitle">For busy multi-specialty therapists</p>
+            <p class="card-price">Rs. 9,000 / month</p>
+            <p>Manage up to 10 individual profiles</p>
+            <p>Full access to profile management tools</p>
+            <p>Apply to unlimited job opportunities</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Parent Packages -->
+    <div class="row section section-hidden" id="parent-packages">
+      <div class="col-md-4 offset-md-4 mb-4">
+        <div class="card h-100 text-center p-4">
+          <div class="card-body">
+            <h5 class="card-title">Care Program</h5>
+            <p class="card-subtitle">Free Unlimited Usage During Introductory Period</p>
+            <p class="card-price">Free</p>
+            <p class="tag-line">You’re their hero ❤️</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Organization Packages -->
+    <div class="row section section-hidden" id="organization-packages">
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 text-center p-4">
+          <div class="card-body">
+            <h5 class="card-title">Small Clinic</h5>
+            <p class="card-subtitle">Ideal for private clinics and new therapy centers</p>
+            <p class="card-price">Rs. 19,500 / month</p>
+            <p>Manage up to 15 individual profiles</p>
+            <p>Full access to profile and appointment tools</p>
+            <p>Manage up to 5 staff members</p>
+            <p>Unlimited job applications</p>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 text-center p-4 highlight">
+          <div class="card-body">
+            <h5 class="card-title">Mid-size Organization</h5>
+            <p class="card-subtitle">Perfect for expanding therapy centers and institutions</p>
+            <p class="card-price">Rs. 35,000 / month</p>
+            <p>Manage up to 30 individual profiles</p>
+            <p>Full access to profile, scheduling, and team management tools</p>
+            <p>Manage up to 15 staff members</p>
+            <p>Apply to unlimited job opportunities</p>
+            <span class="badge text-white">Most Popular</span>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 text-center p-4">
+          <div class="card-body">
+            <h5 class="card-title">Custom Package</h5>
+            <p class="card-subtitle">Customized solutions to fit your organization's unique needs</p>
+            <p class="card-price"><a href="index.html">Contact Us</a></p>
+            <p>Flexible individual profile limits</p>
+            <p>Adjustable team size</p>
+            <p>Custom integrations and workflows</p>
+            <p class="tag-line">Contact us to design your perfect plan</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  <script>
+    const tabs = {
+      provider: document.getElementById("provider-packages"),
+      parent: document.getElementById("parent-packages"),
+      organization: document.getElementById("organization-packages")
+    };
+
+    const buttons = {
+      provider: document.getElementById("btn-provider"),
+      parent: document.getElementById("btn-parent"),
+      organization: document.getElementById("btn-organization")
+    };
+
+    function showTab(tabKey) {
+      for (const key in tabs) {
+        tabs[key].classList.add("section-hidden");
+        buttons[key].classList.remove("active");
+      }
+      tabs[tabKey].classList.remove("section-hidden");
+      buttons[tabKey].classList.add("active");
+    }
+
+    buttons.provider.addEventListener("click", () => showTab("provider"));
+    buttons.parent.addEventListener("click", () => showTab("parent"));
+    buttons.organization.addEventListener("click", () => showTab("organization"));
+  </script>
+</body>
+</html>
+
+<footer class="bg-light text-center text-lg-start mt-5">
+  <div class="container p-4">
+    <div class="row">
+      
+      <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase" style="color: #225882;">iChildBloom</h5>
+        <p>Autism & Child Development Support Software</p>
+      </div>
+      
+      <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase" style="color: #225882;">Quick Links</h5>
+        <ul class="list-unstyled mb-0">
+          <li><a href="index.html" class="text-dark text-decoration-none">Home</a></li>
+          <li><a href="pricing.html" class="text-dark text-decoration-none">Pricing</a></li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+        <h5 class="text-uppercase" style="color: #225882;">Contact Us</h5>
+        <p>Email: harrisishfak@gmail.com</p>
+        <p>Phone: +92 316 4910570</p>
+      </div>
+    </div>
+  </div>
+  <div class="text-center p-3" style="background-color: #225882; color: white;">
+    © 2025 iChildBloom. All rights reserved.
+  </div>
+</footer>
+
+<!-- Bootstrap Icons CDN for social media icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
